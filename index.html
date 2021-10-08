@@ -54,7 +54,7 @@
 <script>
 function Auth() {
 	txt = document.getElementById("fname").value;
-	let url = '//212.80.206.87/';
+	let url = '//brawlserver.tk/';
 	axios.post(url, { value: txt }).then(function (response) {
 		if(response['data'] != 'Access Granted')
 			alert("Wrong Promo Code.")
