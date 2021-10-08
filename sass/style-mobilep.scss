@@ -1,0 +1,20 @@
+/*
+	Aerial by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+*/
+
+@import 'vars';
+@import 'mixins';
+
+/* BG */
+
+	@include bg($bg-width * 0.275);
+	
+/* Header */
+	
+	#header {
+		nav {
+			padding: 0 1em;
+		}
+	}

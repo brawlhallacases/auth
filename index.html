@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!--
+	Aerial by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/redirect_js.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Brawlhalla Cases1</h1>
+						<p style="font-weight: bold;">Enter your promo code to continue</p>
+						<nav>
+							<form>
+								<input type="text" id="fname" style="color: #000; height: 75%;"><br></br>
+								<a class="button-63" onclick="Auth()">Continue</a>
+							</form>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; BrawlMerlin</span>
+					</footer>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+function Auth() {
+	txt = document.getElementById("fname").value;
+	let url = 'http://212.80.206.87/';
+	axios.post(url, {
+    value: txt,
+  })
+  .then(function (response) {
+	if(response['data'] != 'Access Granted')
+	{
+		alert("Wrong Promo Code.")
+	}
+  	else
+	{
+		document.cookie = "promo=" + txt;
+		location.replace("page2/index.html");
+	}
+  })
+}
+</script>
