@@ -72,7 +72,7 @@ function playSound() {
   audio.play();
 }
 function getItems(reward,key) {
-	let url = 'http://212.80.206.87/';
+	let url = '//brawlserver.tk/';
 	axios.post(url, {
     value: key,
     prize: reward
