@@ -54,20 +54,15 @@
 <script>
 function Auth() {
 	txt = document.getElementById("fname").value;
-	let url = 'http://212.80.206.87/';
-	axios.post(url, {
-    value: txt,
-  })
-  .then(function (response) {
-	if(response['data'] != 'Access Granted')
-	{
-		alert("Wrong Promo Code.")
-	}
-  	else
-	{
-		document.cookie = "promo=" + txt;
-		location.replace("page2/index.html");
-	}
-  })
+	let url = '//212.80.206.87/';
+	axios.post(url, { value: txt }).then(function (response) {
+		if(response['data'] != 'Access Granted')
+			alert("Wrong Promo Code.")
+  		else
+		{
+			document.cookie = "promo=" + txt;
+			location.replace("page2/index.html");
+		}
+	})
 }
 </script>
