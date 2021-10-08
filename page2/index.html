@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Brawlhalla Case Opener</title>
+  <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'><link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body onload="reset()" bgcolor="grey">
+
+
+	
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+</div >
+	
+	
+<!-- partial:index.partial.html -->
+<div style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+		
+	<div id=unbox-area>
+	  <div class="arrow-down"></div>
+	  <div id=cardList></div>
+	  <div class="context">
+		<h1>Brawlhalla Colors Case</h1>
+      </div>
+		
+	</div>
+	<div id="button-container">
+		<button id="who-are-we" onclick="openCase();">SPIN</button>
+	</div>
+	<div id=dialog>
+	  <div id=dialog-msg></div>
+	</div>
+  <p hidden id='prize'>SERVER ERROR! plese contact me at Twitter: @BrawlMerlin</p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
