@@ -29,7 +29,7 @@ function reset(){
 }
 
 function openCase(){
-  var key = document.cookie.split('=')[1];
+  var key =  getCookie("promo");
   var used = getCookie("used");
   if (key == undefined)
   {
