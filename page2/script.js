@@ -66,7 +66,7 @@ function openCase(){
         'Get codes': function(event) {
             // here is the modification of the button
             // opacity set to 25%, all events unbound
-            $('#dialog-msg').html(document.getElementById("prize").textContent);
+            $('#dialog-msg').html("QUICK! SAVE IT!<br>" + document.getElementById("prize").textContent);
             $('#dialog').siblings('.ui-dialog-buttonpane').find('button:first').hide();
         },
         'Close': function(event) {
