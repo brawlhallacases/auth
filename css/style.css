@@ -105,7 +105,6 @@
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 		/* Set your background with this */
-		filter: blur(4px);
 		background: #2d8eb8 url("images/bg2.png") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
