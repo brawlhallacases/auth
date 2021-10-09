@@ -30,16 +30,17 @@ function reset(){
 
 function openCase(){
   var key = document.cookie.split('=')[1];
-  if (key == 'invalid')
+  var used = getCookie("used");
+  if (key == undefined)
   {
 	alert("Used Promo Code Error!");
 	location.replace("../index.html");
   }
-	cookieStore.getAll().then(cookies => cookies.forEach(cookie => {
-	    console.log('Cookie deleted:', cookie);
-	    cookieStore.delete(cookie.name);
-	}));
-  document.cookie = "promo=invalid";
+  else if (used == 'true')
+  {
+	alert("Used Promo Code Error!");
+	location.replace("../index.html");  
+  }
   document.getElementById("who-are-we").disabled = true;
   var rand = 16786;
   var childNumber = Math.floor(rand/100)+4;
@@ -102,6 +103,18 @@ function getItems(reward,key) {
 	if(response['data'] != 'Access Granted')
 	{
 		document.getElementById("prize").textContent = response['data'];
+		document.cookie = "used=true";
 	}
   })
 }
+
+function getCookie(name) {
+    var cookies = document.cookie;
+    var parts = cookies.split(name + "=");
+    var cookieValue = '';
+    if (parts.length == 2) {
+        cookieValue = parts.pop().split(";").shift();
+    }
+    return cookieValue;
+}
+
