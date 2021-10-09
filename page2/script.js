@@ -39,6 +39,10 @@ function openCase(){
   else if (used == 'true')
   {
 	alert("Used Promo Code Error!");
+	cookieStore.getAll().then(cookies => cookies.forEach(cookie => {
+        console.log('Cookie deleted:', cookie);
+        cookieStore.delete(cookie.name);
+	}));
 	location.replace("../index.html");  
   }
   document.getElementById("who-are-we").disabled = true;
