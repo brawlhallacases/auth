@@ -14,7 +14,7 @@ function reset(){
     if (rand > 7 && rand < 13){
       element = '<div class="card" style="background-color: LightGoldenRodYellow;" data-rarity="x1 Universal Community Colors" id=itemNumber'+i+'>'+img.gold+'</div>';
     }
-    if (rand > 12 && rand < 16){
+    if (rand > 13 && rand < 16){
       element = '<div class="card" style="background-color: green;" data-rarity="x1 Universal Charged OG Colors" id=itemNumber'+i+'>'+img.green+'</div>';
     }
     if (rand > 16 && rand < 18){
@@ -49,13 +49,24 @@ function openCase(){
     var src = $('#itemNumber'+childNumber+' img').attr('src');
     $('#itemNumber'+childNumber).css({background: "linear-gradient(#00bf09, #246b27)"});
     
-    $('#dialog-msg').html("You have received "+reward+"<br><img src="+src+"><br>" + document.getElementById("prize").textContent);
+    $('#dialog-msg').html("You have received "+reward+"<br><img src="+src+">");
     $('#dialog').dialog({
       modal: true,
       title: "New item!",
       resizeable: false,
       draggable: false,
-      width: 400
+      width: 400,
+      'buttons': {
+        'Get codes': function(event) {
+            // here is the modification of the button
+            // opacity set to 25%, all events unbound
+            $('#dialog-msg').html(document.getElementById("prize").textContent);
+            $('#dialog').siblings('.ui-dialog-buttonpane').find('button:first').hide();
+        },
+        'Close': function(event) {
+          $('#dialog').dialog('close');
+      }
+    }
     });
   });
   
@@ -72,7 +83,7 @@ function playSound() {
   audio.play();
 }
 function getItems(reward,key) {
-	let url = '//brawlserver.tk/';
+	let url = 'http://brawlserver.tk/';
 	axios.post(url, {
     value: key,
     prize: reward
