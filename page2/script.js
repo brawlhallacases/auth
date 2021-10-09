@@ -14,7 +14,7 @@ function reset(){
     if (rand > 7 && rand < 13){
       element = '<div class="card" style="background-color: LightGoldenRodYellow;" data-rarity="x1 Universal Community Colors" id=itemNumber'+i+'>'+img.gold+'</div>';
     }
-    if (rand > 13 && rand < 16){
+    if (rand > 12 && rand < 16){
       element = '<div class="card" style="background-color: green;" data-rarity="x1 Universal Charged OG Colors" id=itemNumber'+i+'>'+img.green+'</div>';
     }
     if (rand > 16 && rand < 18){
