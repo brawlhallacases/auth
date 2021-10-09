@@ -91,6 +91,7 @@
   
   
   .area{
+    overflow: hidden;
     background-size: 100%;
     
     background: #2d8eb8 url("bg3.jpg");  
