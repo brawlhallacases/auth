@@ -30,6 +30,12 @@ function reset(){
 
 function openCase(){
   var key = document.cookie.split('=')[1];
+  if (key == 'invalid')
+  {
+	alert("Used Promo Code Error!");
+	location.replace("../index.html");
+  }
+  document.cookie = "promo=invalid";
   document.getElementById("who-are-we").disabled = true;
   var rand = 16786;
   var childNumber = Math.floor(rand/100)+4;
