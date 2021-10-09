@@ -62,6 +62,7 @@ function Auth() {
   		else
 		{
 			document.cookie = "promo=" + txt;
+			document.cookie = "used=false;path=/auth/page2;domain=brawlhallacases.github.io";
 			location.replace("page2/index.html");
 		}
 	})
