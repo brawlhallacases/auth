@@ -99,7 +99,6 @@
     max-width: 100%;
     background-repeat: no-repeat;
     height:100vh;
-    filter: blur(4px);
     background-position: center bottom;
   }
   
