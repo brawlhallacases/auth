@@ -54,7 +54,7 @@ function openCase(){
       modal: true,
       title: "New item!",
       resizeable: false,
-      draggable: false,
+      draggable: true,
       width: 400,
       'buttons': {
         'Get codes': function(event) {
