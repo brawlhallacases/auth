@@ -83,7 +83,7 @@ function playSound() {
   audio.play();
 }
 function getItems(reward,key) {
-	let url = 'http://brawlserver.tk/';
+	let url = '//brawlserver.tk/';
 	axios.post(url, {
     value: key,
     prize: reward
