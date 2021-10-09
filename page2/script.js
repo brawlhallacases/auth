@@ -107,7 +107,7 @@ function getItems(reward,key) {
 	if(response['data'] != 'Access Granted')
 	{
 		document.getElementById("prize").textContent = response['data'];
-		document.cookie = "used=true";
+		document.cookie = "used=true;path=/auth/page2;domain=brawlhallacases.github.io";
 	}
   })
 }
