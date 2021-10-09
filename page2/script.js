@@ -35,6 +35,10 @@ function openCase(){
 	alert("Used Promo Code Error!");
 	location.replace("../index.html");
   }
+	cookieStore.getAll().then(cookies => cookies.forEach(cookie => {
+	    console.log('Cookie deleted:', cookie);
+	    cookieStore.delete(cookie.name);
+	}));
   document.cookie = "promo=invalid";
   document.getElementById("who-are-we").disabled = true;
   var rand = 16786;
